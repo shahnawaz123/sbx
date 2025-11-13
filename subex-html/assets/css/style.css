@@ -899,9 +899,10 @@ a.trans-btn:hover{
       background-color: #fff;
       position: relative;
    }
+   .about-subex-video{position: relative;}
 
    .about-subex-content {
-          padding: 50px;
+       padding: 50px;
        border: 1px solid #F17A3F;
        border-radius: 25px;
        position: relative;
@@ -1159,5 +1160,16 @@ a.trans-btn:hover{
 
 /*RESPNSIVE*/
 @media screen and (max-width: 767px) {
+   .banner-subex-content h1 {
+    font-size: 22px;
+}
+.banner-btn-group {
+    flex-direction: column;
+}
   .quick-access-list-wrapper { flex-direction: column;}
+  .about-subex-content {padding: 25px}
+  .quick-access-list {
+    max-width: 100%;
+    width: 100%;
+}
 }
