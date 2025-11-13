@@ -894,10 +894,12 @@ a.trans-btn:hover{
    font-weight: 400;
 }
    .about-subex{
-      /*background-image: url(../images/investor/clip.jpg);*/
-      background-size: cover;
-      background-color: #fff;
-      position: relative;
+      background-image: url(https://inclusivity.agency/jlf/video.gif);
+       background-size: cover;
+       background-color: #fff;
+       position: relative;
+       background-position: center center;
+       background-repeat: no-repeat;
    }
    .about-subex-video{position: relative;}
 
@@ -912,15 +914,15 @@ a.trans-btn:hover{
           height: 100%;
           width: 100%;
       }
-      .video-container-txt {
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    transform: translate(0px, -50%);
-    z-index: 2;
-}
+      /*.video-container-txt {
+          position: absolute;
+          top: 50%;
+          left: 0px;
+          right: 0px;
+          width: 100%;
+          transform: translate(0px, -50%);
+          z-index: 2;
+      }*/
 
    .featured-video{
          background-image: url(../images/investor/video-bg.jpg);
@@ -1160,8 +1162,21 @@ a.trans-btn:hover{
 
 /*RESPNSIVE*/
 @media screen and (max-width: 767px) {
+   .banner-subex {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/investor/banner-bg.jpg);
+    background-position: 60% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
    .banner-subex-content h1 {
     font-size: 22px;
+}
+.featured-video-wrapper img {
+    border-radius: 35px;
 }
 .banner-btn-group {
     flex-direction: column;
@@ -1172,4 +1187,14 @@ a.trans-btn:hover{
     max-width: 100%;
     width: 100%;
 }
+.accordion-header h2 {
+    font-size: 20px;
+    line-height: 26px;
+}
+.accordion {
+    margin-top: 10px;
+}
+.m-fdr{flex-direction: row;}
+.m-cg10{column-gap: 10px;}
+.m-aic{align-items: center;}
 }
