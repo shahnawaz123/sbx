@@ -830,53 +830,334 @@
    .mt10{margin-top: 10px;}
    .mt20{margin-top: 20px;}
    .pt20{padding-top: 20px;}
-   .small-text{    font-size: 12px;
-    font-weight: 300;}
-   .bt-orange {
-    border-top: 1px solid #F17A3F;
+   .small-text{font-size: 12px; font-weight: 300;}
+   .bt-orange {border-top: 1px solid #F17A3F;}
+a.solid-btn {
+    background: #F17A3F;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 1px solid #F17A3F;
 }
+a.solid-btn:hover {
+    background: #fff;
+    color: #F17A3F;
+    border: 1px solid #F17A3F;
+}
+a.trans-btn{
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 1px solid #F17A3F;
+}
+a.trans-btn:hover{
+    background: #F17A3F;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 1px solid #F17A3F;
+}
+.ccc{border-top: 1px solid #F17A3F;}
+
    .banner-button-wrapper {
        display: flex;
        column-gap: 20px;
    }
 
-  
-   section.banner-subex {
-    min-height: 700px;
-    display: flex;
-    align-items: center;
-    background-image: url(../images/investor/banner-bg.jpg);
-    background-size: cover;
-    background-position: center;
+   .banner-subex {
+       min-height: 700px;
+       display: flex;
+       align-items: center;
+       background-image: url(../images/investor/banner-bg.jpg);
+       background-size: cover;
+       background-position: center;
+   }
+   .banner-btn-group {
+       display: flex;
+       flex-direction: row;
+       column-gap: 40px;
+   }
+.banner-subex .container {
+    margin-left: 0;
+}
+.banner-subex-content p{
+   font-size: 16px;
+   line-height: 18px;
+   color: #fff;
+   font-weight: 400;
 }
    .about-subex{
-      background-image: url(../images/investor/clip.jpg);
+      /*background-image: url(../images/investor/clip.jpg);*/
       background-size: cover;
       background-color: #fff;
+      position: relative;
    }
-.investor-about-subex-box{
 
+   .about-subex-content {
+          padding: 50px;
+       border: 1px solid #F17A3F;
+       border-radius: 25px;
+       position: relative;
+       background: #ffffffa3;
+      }
+      .about-subex-video video {
+          height: 100%;
+          width: 100%;
+      }
+      .video-container-txt {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    transform: translate(0px, -50%);
+    z-index: 2;
 }
-.about-subex-content {
-    padding: 50px;
-    border: 1px solid #F17A3F;
-    border-radius: 25px;
-    background: #ffffffd6;
-}
-/*.about-subex{
-      background-image: url(../images/investor/video-bg.jpg);
+
+   .featured-video{
+         background-image: url(../images/investor/video-bg.jpg);
+       background-size: cover;
+       background-color: #fff;
+    }
+
+    .featured-video-wrapper img {
+       border-radius: 84px;
+   }
+   
+   .quick-access{
+     background-image: url(../images/investor/quick-access-bg.jpg);
+     background-size: cover;
+   }
+
+   .quick-access-list-wrapper {
+       display: flex;
+       flex-direction: row;
+       column-gap: 40px;
+   }
+
+   .quick-access-list {
+         border: 1px solid #F17A3F;
+       border-radius: 20px;
+       padding: 27px 30px;
+       background-color: #231f20e3;
+       max-width: 570px;
+       width: 100%;
+       margin: 25px 0px;
+   }
+
+   .quick-access-list p {
+       font-size: 18px;
+       line-height: 28px;
+        color: #fff;
+   }
+
+   .quick-access-list h3 {
+       font-size: 26px;
+       line-height: 36px;
+           margin-bottom: 5px;
+           color: #fff;
+   }
+   .governance-corporate-info{
+      background-image: url(../images/investor/governance-corporate-info.jpg);
       background-size: cover;
-      background-color: #fff;
-   }*/
+   }
 
-   section.featured-video{
-      background-image: url(../images/investor/video-bg.jpg);
-    background-size: cover;
-    background-color: #fff;
- }
- .featured-video-wrapper img {
-    border-radius: 84px;
+/* ===== Accordion Scroll + Hover Styling ===== */
+    .accordion {
+      border-radius: 8px;
+      padding: 15px 0px;
+      transition: all 0.4s ease;
+      overflow: hidden;
+      opacity: 0.8;
+      transform: scale(0.98);
+      cursor: pointer;
+          margin-top: 25px;
+    }
+
+    .accordion:hover {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .accordion:hover h2 {
+    color: #F17A3F;
 }
-   
 
-   
+    .accordion.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      user-select: none;
+    }
+
+    .icon {
+      width: 28px;
+      height: 28px;
+      border: 2px solid #000;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      flex-shrink: 0;
+      color: #000;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-header h2 {
+      font-size: 26px;
+      line-height: 36px;
+      font-weight: 400;
+      color: #000;
+      margin: 0;
+    }
+
+    
+
+    .accordion-content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+      padding-left: 43px;
+      gap: 4px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    .accordion-content .subtext {
+      font-size: 16px;
+       color: #000;
+       line-height: 26px;
+    }
+
+    /* Expanded (active or hover) */
+    .accordion.active .accordion-content,
+    .accordion:hover .accordion-content {
+      margin-top: 10px;
+      opacity: 1;
+      max-height: 200px;
+    }
+
+    .accordion.active .icon,
+    .accordion:hover .icon {
+      border-color: #f26c23;
+      color: #f26c23;
+    }
+
+
+
+    /*recent press and features*/
+
+    .recent-press-features{
+      background-image: url(../images/investor/recent-press-features.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+   }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+      letter-spacing: 0.5px;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      flex: 1 1 300px;
+      background: #fff;
+      border-radius: 40px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      padding: 60px 40px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h4 {
+         color: #F17A3F;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    font-weight: bold;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .card p {
+      font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    color: #000;
+    }
+
+    .date-location {
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 12px;
+    }
+
+    .card .btn {
+      align-self: flex-start;
+      background-color: #F17A3F;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #e65a20;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+
+/*RESPNSIVE*/
+@media screen and (max-width: 767px) {
+  .quick-access-list-wrapper { flex-direction: column;}
+}
